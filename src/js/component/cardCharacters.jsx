@@ -5,15 +5,6 @@ import { Context } from "../store/appContext";
 export const Characters = ({nombre, genero, id}) => {
   const {actions} = useContext(Context)
 
-  //   function obtenerInfoDePersonaje(){
-  //       fetch("https://swapi.dev/api/people/"+id)
-	// 	.then(res => res.json())
-	// 	.then(data => console.log(data.results))
-	// 	.catch(err => console.error(err))
-  //   }
-  //   useEffect(()=>{
-	// 	obtenerInfoDePersonaje();
-	// },[])
 
 	return (
 			<div className="card d-flex mx-3 my-3 bg-warning" style={{width: "18rem", height:"32rem"}}>
