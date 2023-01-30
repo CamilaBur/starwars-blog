@@ -9,15 +9,7 @@ import "../../styles/home.css";
 export const ViewPlanets = () => {
   const {store, actions} = useContext(Context);
   const params = useParams();
-  // const [detallePlaneta, setDetallePlaneta] = useState([]);
 
-  
-//   function obtenerDetalleDePlaneta(){
-//     fetch("https://swapi.dev/api/planets/"+params.theid)
-//     .then(res => res.json())
-//     .then(data => setDetallePlaneta(data))
-//     .catch(err => console.error(err))
-// }
   useEffect(()=>{
     actions.obtenerDetalleDePlaneta(params.theid);
 },[])

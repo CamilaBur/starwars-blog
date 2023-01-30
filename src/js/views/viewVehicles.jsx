@@ -7,14 +7,7 @@ import "../../styles/home.css";
 export const ViewVehicles = () => {
   const {store,actions} = useContext(Context);
   const params = useParams();
-  // const [detalleVehiculo, setDetalleVehiculo] = useState([]);
 
-//   function obtenerDetalleDeVehiculo(){
-//     fetch("https://swapi.dev/api/vehicles/"+params.theid)
-//     .then(res => res.json())
-//     .then(data => setDetalleVehiculo(data))
-//     .catch(err => console.error(err))
-// }
 
     useEffect(()=>{
       actions.obtenerDetalleDeVehiculo(params.theid);

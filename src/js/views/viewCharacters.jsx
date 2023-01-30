@@ -9,15 +9,7 @@ import "../../styles/home.css";
 export const ViewCharacters = () => {
   const params = useParams();
   const {store, actions} = useContext(Context);
-  // const [detallePersonaje, setDetallePersonaje] = useState([]);
 
-  
-//   function obtenerDetalleDePersonaje(){
-//     fetch("https://swapi.dev/api/people/"+params.theid)
-//     .then(res => res.json())
-//     .then(data => setDetallePersonaje(data))
-//     .catch(err => console.error(err))
-// }
   useEffect(()=>{
     actions.obtenerDetalleDePersonaje(params.theid);
 },[])

@@ -10,44 +10,8 @@ import { Context } from "../store/appContext.js";
 export const Home = () => {
 
 	const {store} = useContext(Context);
-	// const[personajes, setPersonajes] = useState([]);
-	//  const[vehiculos, setVehiculos] = useState([]);
-	//  const[planetas, setPlanetas] = useState([]);
-
-
-	// function obtenerInfoPersonajes(){
-	// 	fetch("https://swapi.dev/api/people/")
-	// 	.then(res => res.json())
-	// 	.then(data => setPersonajes(data.results))
-	// 	.catch(err => console.error(err))
-
-	// }
-	//console.log(personajes);
 	
-	//  function obtenerInfoVehiculos(){
-	// 	fetch("https://swapi.dev/api/vehicles/")
-	// 	.then(res => res.json())
-	// 	.then(data => setVehiculos(data.results))
-	// 	.catch(err => console.error(err))
-	//  }
-	 //console.log(vehiculos);
-	
-	//  function obtenerInfoPlanetas(){
-	// 	fetch("https://swapi.dev/api/planets/")
-	// 	.then(res => res.json())
-	// 	.then(data => setPlanetas(data.results))
-	// 	.catch(err => console.error(err))
-	//  }
-	//  console.log(planetas);
 
-	// useEffect(()=>{
-	// 	// obtenerInfoPersonajes();
-	// 	// obtenerInfoVehiculos();
-	// 	obtenerInfoPlanetas()
-	// },[])
-
-
-	
 	return(
 		<div className="container">
 			<div className="d-flex container mb-5" style={{overflowX: "scroll", height:"570px"}}>
