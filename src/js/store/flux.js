@@ -104,7 +104,7 @@ const getState = ({
                 })
             },
             login: (userEmail, userPassword) => {
-                fetch("https://3000-camilabur-buildastarwar-mhcvhrla93r.ws-us85.gitpod.io/login", {
+                fetch("https://3000-4geeksacade-flaskresthe-y0c8f8rmjhk.ws-us85.gitpod.io/login", {
                         method: 'POST',
                         // mode: "no-cors",
                         // credentials: "include",
@@ -137,7 +137,7 @@ const getState = ({
 
 
             signup: (userEmail, userPassword, userName) => {
-                fetch("https://3000-camilabur-buildastarwar-mhcvhrla93r.ws-us85.gitpod.io/signup", {
+                fetch("https://3000-4geeksacade-flaskresthe-y0c8f8rmjhk.ws-us85.gitpod.io/signup", {
                         method: 'POST',
                         // mode: "no-cors",
                         // credentials: "include",
