@@ -97,6 +97,77 @@ const getState = ({
                     favoritos: store.favoritos.filter(fav => fav !== favoritos)
                 })
             },
+            logout: () => {
+                localStorage.removeItem('token');
+                setStore({
+                    auth: false
+                })
+            },
+            login: (userEmail, userPassword) => {
+                fetch("https://3000-camilabur-buildastarwar-mhcvhrla93r.ws-us85.gitpod.io/login", {
+                        method: 'POST',
+                        // mode: "no-cors",
+                        // credentials: "include",
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({
+                            "email": userEmail,
+                            "password": userPassword
+                        }) 
+                    })
+                    .then((response) => {
+                        console.log(response.status);
+                        if (response.status === 200) {
+                            setStore({
+                                auth: true
+                            })
+                        }
+                        return response.json()
+                    })
+                    .then((data) => {
+                        console.log(data)
+                        if (data.msg === "Bad email or password") {
+                            alert(data.msg)
+                        }
+                        localStorage.setItem("token", data.access_token)
+                    })
+                    .catch((err) => console.log(err))
+            },
+
+
+            signup: (userEmail, userPassword, userName) => {
+                fetch("https://3000-camilabur-buildastarwar-mhcvhrla93r.ws-us85.gitpod.io/signup", {
+                        method: 'POST',
+                        // mode: "no-cors",
+                        // credentials: "include",
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({
+                            "username": userName,
+                            "password": userPassword,
+                            "email": userEmail
+                        }) 
+                    })
+                    .then((response) => {
+                        console.log(response.status);
+                        if (response.status === 200) {
+                            setStore({
+                                auth: true
+                            })
+                        }
+                        return response.json()
+                    })
+                    .then((data) => {
+                        console.log(data)
+                        if (data.msg === "Bad email or password") {
+                            alert(data.msg)
+                        }
+                        localStorage.setItem("token", data.access_token)
+                    })
+                    .catch((err) => console.log(err))
+            },
 
             loadSomeData: () => {
                 /**
