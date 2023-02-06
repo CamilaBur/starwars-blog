@@ -104,7 +104,7 @@ const getState = ({
                 })
             },
             login: (userEmail, userPassword) => {
-                fetch("https://3000-4geeksacade-flaskresthe-y0c8f8rmjhk.ws-us85.gitpod.io/login", {
+                fetch("https://3000-4geeksacade-flaskresthe-588h69jde0l.ws-us85.gitpod.io/login", {
                         method: 'POST',
                         // mode: "no-cors",
                         // credentials: "include",
@@ -114,7 +114,7 @@ const getState = ({
                         body: JSON.stringify({
                             "email": userEmail,
                             "password": userPassword
-                        }) 
+                        })
                     })
                     .then((response) => {
                         console.log(response.status);
@@ -137,7 +137,7 @@ const getState = ({
 
 
             signup: (userEmail, userPassword, userName) => {
-                fetch("https://3000-4geeksacade-flaskresthe-y0c8f8rmjhk.ws-us85.gitpod.io/signup", {
+                fetch("https://3000-4geeksacade-flaskresthe-588h69jde0l.ws-us85.gitpod.io/signup", {
                         method: 'POST',
                         // mode: "no-cors",
                         // credentials: "include",
@@ -148,7 +148,7 @@ const getState = ({
                             "username": userName,
                             "password": userPassword,
                             "email": userEmail
-                        }) 
+                        })
                     })
                     .then((response) => {
                         console.log(response.status);
